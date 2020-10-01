@@ -5,21 +5,21 @@
     font-style: normal;
     font-weight: 400;
     src: local ("Roboto");
-    src: url("/fonts/roboto.woff2") format("woff2"), url("/fonts/roboto.woff") format("woff");
+    src: url("fonts/roboto.woff2") format("woff2"), url("fonts/roboto.woff") format("woff");
 }
 @font-face {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     src: local ("Roboto");
-    src: url("/fonts/robotomedium.woff2") format("woff2"), url("/fonts/robotomedium.woff") format("woff");
+    src: url("fonts/robotomedium.woff2") format("woff2"), url("fonts/robotomedium.woff") format("woff");
 }
 @font-face {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
     src: local ("Roboto");
-    src: url("/fonts/robotobold.woff2") format("woff2"), url("/fonts/robotobold.woff") format("woff");
+    src: url("fonts/robotobold.woff2") format("woff2"), url("fonts/robotobold.woff") format("woff");
 }
 :root {
     --basic-grey: #849D8F;
@@ -46,7 +46,6 @@
 }
 .main-header {}
 .main-header-logo {}
-
 .main-nav {
     font-weight: 700;
     line-height: 18px;
@@ -77,7 +76,6 @@
 .login-link {}
 .basket-link {}
 .contacts-short {}
-
 .contacts-short-time {
     font-weight: 700;
     font-size: 14px;
@@ -95,7 +93,6 @@
 .choice-slider {}
 .choice-slider-list {}
 .choice-slider-item {}
-
 .choice-slider-header {
     font-weight: 700;
     font-size: 60px;
@@ -133,7 +130,6 @@
     list-style: none;
 }
 .offers-item {}
-
 .offer-item-header {
     font-size: 35px;
     line-height: 41px;
@@ -143,7 +139,6 @@
     line-height: 22px;
 }
 .bestsellers {}
-
 .bestsellers-list {
     list-style: none;
 }
@@ -154,8 +149,9 @@
 .bestsellers-item-link:hover, .bestsellers-item-link:active {
     color: var(--special-whitelink);
 }
-.bestsellers-item-img {}
-
+.bestsellers-item-img img{
+    border-radius: 50%;
+}
 .bestsellers-item-price {
     text-decoration: none;
     color: var(--basic-white);
@@ -171,7 +167,6 @@
     color: var(--special-whitelink);
 }
 .shop-desc {}
-
 .shop-desc-header {
     font-weight: 500;
     font-size: 24px;
@@ -184,7 +179,6 @@
     line-height: 22px;
 }
 .blog {}
-
 .blog-header {
     font-weight: 500;
     line-height: 22px;
@@ -199,14 +193,12 @@
     color: var(--special-blacklink);
 }
 .mailing {}
-
 .mailing-text {
     line-height: 22px;
     color: var(--special-grey);
 }
 .main-footer {}
 .main-contacts {}
-
 .main-contacts-text {
     font-size: 14px;
     line-height: 20px;
@@ -224,7 +216,6 @@
     color: var(--special-blacklink);
 }
 .socials {}
-
 .socials-list {
     list-style: none;
 }
@@ -233,7 +224,6 @@
     color: var(--basic-white);
 }
 .docs {}
-
 .docs-list {
     list-style: none;
 }
@@ -249,7 +239,6 @@
 }
 .copy {}
 .copy-logo {}
-
 .copy-text {
     color: var(--basic-white);
     font-size: 12px;

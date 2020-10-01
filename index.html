@@ -2,8 +2,8 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <link href="/css/normalize.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Глейси</title>
   </head>
 
@@ -11,7 +11,8 @@
 
     <header class="main-header">
       <div class="main-header-logo">
-        <img src="https://via.placeholder.com/154" width="154" height="64" alt="Логотип Глэйси">
+        <img src="img/logo.svg" width="154" height="64" alt="Логотип Глэйси"> 
+        <!--logo в формате png весит меньше, но на странице выглядит более размыто-->
       </div>
       <nav class="main-nav">
         <ul class="site-nav-list">
@@ -20,9 +21,9 @@
           <li class="site-nav-item"><a href="#">О компании</a></li>
         </ul>
         <div class="user-control-items">
-          <a class="search-link" href="#">Search</a>
-          <a class="login-link" href="#">Вход</a>
-          <a class="basket-link" href="#">Пусто</a>
+          <a class="search-link" href="#"><img src="img/icons/icon-search.png" width="16" height="16" alt="Поиск">Search</a>
+          <a class="login-link" href="#"><img src="img/icons/icon-enter.png" width="20" height="19" alt="Вход">Вход</a>
+          <a class="basket-link" href="#"><img src="img/icons/icon-basket.png" width="21" height="20" alt="Корзина">Пусто</a>
         </div>
       </nav>
       <div class="contacts-short">
@@ -39,11 +40,11 @@
           <li class="choice-slider-item">
             <!-- Ссылка на мороженко 1 в каталоге -->
             <a href="#">
-              <img src="https://via.placeholder.com/372" alt="Крем-брюле" width="372" height="584"> 
+              <img src="img/slider/icecream-1_1.png" alt="Крем-брюле" width="372" height="584"> 
             </a>
             <!-- Ссылка на мороженко 2 в каталоге -->
             <a href="#">
-              <img src="https://via.placeholder.com/372" alt="Пломбир с малиновым джемом" width="372" height="584">
+              <img src="img/slider/icecream-1_2.png" alt="Пломбир с малиновым джемом" width="372" height="584">
             </a>
             <p class="choice-slider-header">Крем-брюле и пломбир с малиновым джемом</p>
             <a class="main-button choice-slider-button" href="#">Давайте оба</a>
@@ -51,11 +52,11 @@
           <li class="choice-slider-item">
             <!-- Ссылка на мороженко 3 в каталоге -->
             <a href="#">
-              <img src="https://via.placeholder.com/372" alt="Шоколадный пломбир" width="372" height="584">
+              <img src="img/slider/icecream-2_1.png" alt="Шоколадный пломбир" width="372" height="584">
             </a>
             <!-- Ссылка на мороженко 4 в каталоге -->
             <a href="#">
-              <img src="https://via.placeholder.com/372" alt="Лимонный сорбет" width="372" height="584">
+              <img src="img/slider/icecream-2_2.png" alt="Лимонный сорбет" width="372" height="584">
             </a>
             <p class="choice-slider-header">Шоколадный пломбир и лимонный сорбет</p>
             <a class="main-button choice-slider-button" href="#">Давайте оба</a>
@@ -63,11 +64,11 @@
           <li class="choice-slider-item">
             <!-- Ссылка на мороженко 5 в каталоге -->
             <a href="#">
-              <img src="https://via.placeholder.com/372" alt="Пломбир с помадкой" width="372" height="584">
+              <img src="img/slider/icecream-3_1.png" alt="Пломбир с помадкой" width="372" height="584">
             </a>
             <!-- Ссылка на мороженко 6 в каталоге -->
             <a href="#">
-              <img src="https://via.placeholder.com/372" alt="Клубничный щербет" width="372" height="584">
+              <img src="img/slider/icecream-3_2.png" alt="Клубничный щербет" width="372" height="584">
             </a>
             <p class="choice-slider-header">Пломбир с помадкой и клубничный щербет</p>
             <a class="main-button choice-slider-button" href="#">Давайте оба</a>
@@ -95,7 +96,7 @@
           <li class="bestsellers-item">
             <a class="bestsellers-item-link" href="#">
               <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-              <div class="bestsellers-item-img"><img src="https://via.placeholder.com/267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></div>
+              <div class="bestsellers-item-img"><img src="img/catalog/goods_1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></div>
             </a> 
             <a class="bestsellers-item-price" href="#">310 ₽<span class="item-weight">/кг</span>
             </a>
@@ -103,7 +104,7 @@
           <li class="bestsellers-item">
             <a class="bestsellers-item-link" href="#">
               <h3>Сливочно-кофейное с кусочками шоколада</h3>
-              <div class="bestsellers-item-img"><img src="https://via.placeholder.com/267" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267"></div>
+              <div class="bestsellers-item-img"><img src="img/catalog/goods_2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267"></div>
             </a>
             <a class="bestsellers-item-price" href="#">380 ₽<span class="item-weight">/кг</span>
             </a>
@@ -111,7 +112,7 @@
           <li class="bestsellers-item">
             <a class="bestsellers-item-link" href="#">
               <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-              <div class="bestsellers-item-img"><img src="https://via.placeholder.com/267" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267"></div>
+              <div class="bestsellers-item-img"><img src="img/catalog/goods_3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267"></div>
             </a>
             <a class="bestsellers-item-price" href="#">355 ₽<span class="item-weight">/кг</span>
             </a>
@@ -119,7 +120,7 @@
           <li class="bestsellers-item">
             <a class="bestsellers-item-link" href="#">
               <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-              <div class="bestsellers-item-img"><img src="https://via.placeholder.com/267" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267"></div>
+              <div class="bestsellers-item-img"><img src="img/catalog/goods_4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267"></div>
             </a>
             <a class="bestsellers-item-price" href="#">415 ₽<span class="item-weight">/кг</span>
             </a>
@@ -127,15 +128,15 @@
         </ul>
       </section>
       <section class="shop-desc">
-        <h2 class="shop-desc-header">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
-        <!--Считаю, что заголовок важен, потому что присутствует название и специфика. Полезно для поисковиков-->
-        <ul class="shop-desc-list"> 
-          <li class="shop-desc-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-          <li class="shop-desc-item" >Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-          <li class="shop-desc-item">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-          <li class="shop-desc-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
-        </ul>
-        <!--Иконки перед каждым пунктом списка думаю сделать в оформлении, а не в разметке-->
+        <h2>О нас</h2>
+          <h3 class="shop-desc-header">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
+          <ul class="shop-desc-list"> 
+            <li class="shop-desc-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+            <li class="shop-desc-item" >Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+            <li class="shop-desc-item">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+            <li class="shop-desc-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+          </ul>
+          <!--Иконки перед каждым пунктом списка думаю сделать в оформлении, а не в разметке-->
       </section>
       <aside class="blog">
         <h2>Блог</h2>
@@ -190,7 +191,7 @@
       </section>
       <section class="copy">
         <a class="copy-logo" href="https://htmlacademy.ru/">
-          <img src="https://via.placeholder.com/108" alt="HTML Academy" width="108" height="39">
+          <img src="img/logo-academy.png" alt="HTML Academy" width="108" height="39">
         </a>
         <p class="copy-text">Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2019</p>
       </section>
