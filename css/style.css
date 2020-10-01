@@ -5,23 +5,22 @@
     font-style: normal;
     font-weight: 400;
     src: local ("Roboto");
-    src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
+    src: url("/fonts/roboto.woff2") format("woff2"), url("/fonts/roboto.woff") format("woff");
 }
 @font-face {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     src: local ("Roboto");
-    src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
+    src: url("/fonts/robotomedium.woff2") format("woff2"), url("/fonts/robotomedium.woff") format("woff");
 }
 @font-face {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
     src: local ("Roboto");
-    src: url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotobold.woff") format("woff");
+    src: url("/fonts/robotobold.woff2") format("woff2"), url("/fonts/robotobold.woff") format("woff");
 }
-
 :root {
     --basic-grey: #849D8F;
     --basic-white: #FFFFFF;
@@ -38,7 +37,6 @@
     --special-red-dark: #D07058;
 
 }
-
 .page-body {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
@@ -46,7 +44,6 @@
     background-color: var(--basic-grey);
     color: var(--basic-black);
 }
-
 .main-header {}
 .main-header-logo {}
 
@@ -132,7 +129,6 @@
     font-weight: bold;
     color: var(--basic-white);
 }
-
 .offers-list {
     list-style: none;
 }
@@ -208,9 +204,7 @@
     line-height: 22px;
     color: var(--special-grey);
 }
-.main-footer {
-    
-}
+.main-footer {}
 .main-contacts {}
 
 .main-contacts-text {
@@ -225,7 +219,6 @@
 .main-contacts-tel {
     text-decoration: none;
     color: var(--basic-black);
-    
 }
 .main-contacts-tel:hover, .main-contacts-tel:active {
     color: var(--special-blacklink);
@@ -239,15 +232,14 @@
 .socials-button {
     color: var(--basic-white);
 }
-.docs {
-}
+.docs {}
+
 .docs-list {
     list-style: none;
 }
 .docs-item {
     font-size: 13px;
     line-height: 18px;  
-    
 }
 .docs-item a {
     color: var(--basic-white);
