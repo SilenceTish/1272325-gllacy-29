@@ -5,22 +5,25 @@
     font-style: normal;
     font-weight: 400;
     src: local ("Roboto");
-    src: url("fonts/roboto.woff2") format("woff2"), url("fonts/roboto.woff") format("woff");
+    src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
 }
 @font-face {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     src: local ("Roboto");
-    src: url("fonts/robotomedium.woff2") format("woff2"), url("fonts/robotomedium.woff") format("woff");
+    src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
 }
 @font-face {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
     src: local ("Roboto");
-    src: url("fonts/robotobold.woff2") format("woff2"), url("fonts/robotobold.woff") format("woff");
+    src: url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotobold.woff") format("woff");
 }
+
+/* Global */
+
 :root {
     --basic-grey: #849D8F;
     --basic-white: #FFFFFF;
@@ -37,68 +40,149 @@
     --special-red-dark: #D07058;
 
 }
+
+.page {
+    height: 100%;
+
+}
+
 .page-body {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     background-color: var(--basic-grey);
     color: var(--basic-black);
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    gap: 40px;
+    align-content: start;
+
 }
-.main-header {}
-.main-header-logo {}
+
+/* Main Header */
+
+.main-header {
+    outline: 3px solid #AC1000;
+    outline-offset: -3px;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+
+}
+
+.main-header-logo {
+    outline: 2px solid yellow;
+    outline-offset: -2px;
+
+}
+
 .main-nav {
     font-weight: 700;
     line-height: 18px;
     color: var(--basic-white);
+    display: grid;
+    grid-template-columns: 1fr max-content;
+
 }
+
 .site-nav-list {
+    margin: 0;
+    padding: 0;
     list-style: none;
+    outline: 2px solid #b12687;
+    outline-offset: -2px;
+
 }
+
 .site-nav-item a {
     color: var(--basic-white);
+
 }
+
 .site-nav-item a:hover {
     color: var(--basic-black);
+
 }
+
 .user-control-items {
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
+    outline: 2px solid aqua;
+    outline-offset: -2px;
+
 }
+
 .user-control-items a {
     text-decoration: none;
     color: var(--basic-white);
+
 }
+
 .user-control-items a:hover {
     color: var(--basic-black);
+
 }
+
 .search-link {}
+
 .login-link {}
+
 .basket-link {}
-.contacts-short {}
+
+.contacts-short {
+    outline: 2px solid darkgreen;
+    outline-offset: -2px;
+    grid-column: 2 / -1;
+    justify-self: end;
+}
+
 .contacts-short-time {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     color: var(--basic-white);
+
 }
+
 .contacts-short-tel {
     text-decoration: none;
     font-weight: 700;
     font-size: 22px;
     line-height: 24px;
     color: var(--basic-white);
+
 }
-.wrapper {}
+
+/* Main */
+
+.wrapper {
+    outline: 3px solid blueviolet;
+    outline-offset: -3px;
+    width: 1146px;
+    margin: 0 auto;
+
+}
+
 .choice-slider {}
-.choice-slider-list {}
+
+.choice-slider-list {
+    list-style: none;
+    outline: 4px solid darkorange;
+    outline-offset: -4px;
+
+}
+
 .choice-slider-item {}
+
 .choice-slider-header {
     font-weight: 700;
     font-size: 60px;
     line-height: 60px;
     color: var(--basic-white);
+
 }
+
 .main-button {
     background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
     box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
@@ -109,144 +193,307 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
+
 }
+
 .main-button:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
     box-shadow: 0px 2px 2px #AC1000;
+
 }
+
 .main-button:active {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
     box-shadow: inset 0px 2px 2px #942718;
+
 }
+
 .choice-slider-button {
     font-size: 32px;
     line-height: 44px;  
+
 }
+
 .offers {
     font-weight: bold;
     color: var(--basic-white);
+    outline: 4px solid greenyellow;
+    outline-offset: -4px;
+    
 }
+
 .offers-list {
+    margin: 0;
+    padding: 0px;
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 26px;
+
 }
-.offers-item {}
+
+.offers-item {
+    outline: 5px solid black;
+    outline-offset: -5px;
+    padding: 16px;
+
+}
+
 .offer-item-header {
+    margin: 0;
     font-size: 35px;
     line-height: 41px;
+
 }
+
 .offer-item-text {
     font-size: 18px;
     line-height: 22px;
+
 }
-.bestsellers {}
+
+.bestsellers {
+    outline: 4px solid red;
+    outline-offset: -4px;
+
+}
+
 .bestsellers-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 26px;
+
 }
+
 .bestsellers-item-link {
     color: var(--basic-white);
     font-weight: 500;
+
 }
+
 .bestsellers-item-link:hover, .bestsellers-item-link:active {
     color: var(--special-whitelink);
+
 }
+
 .bestsellers-item-img img{
     border-radius: 50%;
+
 }
+
 .bestsellers-item-price {
     text-decoration: none;
     color: var(--basic-white);
     font-size: 45px;
     line-height: 45px;
     font-weight: 700;
+
 }
+
 .item-weight {
     font-size: 30px;
     line-height: 35px;
+
 }
+
 .bestsellers-item-price:hover, .bestsellers-item-price:active {
     color: var(--special-whitelink);
+
 }
-.shop-desc {}
+
+.shop-desc {
+    outline: 4px solid snow;
+    outline-offset: -4px;
+
+}
+
 .shop-desc-header {
     font-weight: 500;
     font-size: 24px;
     line-height: 30px;
+
 }
+
 .shop-desc-list {
     list-style: none;
+
 }
+
 .shop-desc-item {
     line-height: 22px;
+
 }
-.blog {}
+
+.aside-columns {
+    outline: 4px solid deeppink;
+    outline-offset: -4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 26px;
+
+}
+
+.blog {
+    outline: 5px solid turquoise;
+    outline-offset: -5px;
+    padding: 20px;
+
+}
+
 .blog-header {
     font-weight: 500;
     line-height: 22px;
+
 }
+
 .blog-news {
     color: var(--basic-black);
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
+
 }
+
 .blog-news:hover, .blog-news:active {
     color: var(--special-blacklink);
+
 }
-.mailing {}
+
+.mailing {
+    outline: 5px solid yellowgreen;
+    outline-offset: -5px;
+    padding: 20px;
+
+}
+
 .mailing-text {
     line-height: 22px;
     color: var(--special-grey);
+
 }
-.main-footer {}
-.main-contacts {}
+
+/*Main Footer*/
+
+.main-footer {
+    outline: 3px solid chartreuse;
+    outline-offset: -3px;
+    
+}
+
+.main-contacts {
+    outline: 4px solid fuchsia;
+    outline-offset: -4px;
+    
+}
+
 .main-contacts-text {
     font-size: 14px;
     line-height: 20px;
+
 }
+
 .main-contacts-marked {
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
+
 }
+
 .main-contacts-tel {
     text-decoration: none;
     color: var(--basic-black);
+
 }
+
 .main-contacts-tel:hover, .main-contacts-tel:active {
     color: var(--special-blacklink);
+
 }
-.socials {}
+
+.footer-container {
+    outline: 4px solid white;
+    outline-offset: -4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1144px;
+    margin: 0 auto;
+
+}
+
+.socials {
+    outline: 4px solid mediumblue;
+    outline-offset: -4px;
+            
+}
+
 .socials-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+
 }
+
 .socials-item {}
+
 .socials-button {
     color: var(--basic-white);
+
 }
-.docs {}
+.docs {
+    outline: 4px solid yellow;
+    outline-offset: -4px;
+    justify-self: center;
+    
+}
+
 .docs-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+
 }
+
 .docs-item {
     font-size: 13px;
-    line-height: 18px;  
+    line-height: 18px;
+
 }
+
 .docs-item a {
     color: var(--basic-white);
+
 }
+
 .docs-item a:hover, .docs-item a:active {
     color: var(--special-whitelink);
+
 }
-.copy {}
+
+.copy {
+    outline: 4px solid black;
+    outline-offset: -4px;
+    justify-self: end;
+
+}
+
 .copy-logo {}
+
 .copy-text {
     color: var(--basic-white);
     font-size: 12px;
     line-height: 18px;
+
 }
+
 .copy-text a {
     color: var(--basic-white);
+
 }
+
 .copy-text a:hover, .copy-text a:active {
     color: var(--special-whitelink);
+
 }
