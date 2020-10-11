@@ -216,6 +216,8 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .main-button:hover {
@@ -266,6 +268,8 @@
     line-height: 22px;
 }
 
+    /* Хиты продаж */
+
 .bestsellers {
     outline: 4px solid red;
     outline-offset: -4px;
@@ -280,21 +284,29 @@
     column-gap: 26px;
 }
 
-.bestsellers-item-link {
-    color: var(--basic-white);
-    font-weight: 500;
+.bestsellers-item {
+    text-align: center;
 }
 
-.bestsellers-item-link:hover, .bestsellers-item-link:active {
-    color: var(--special-whitelink);
+.bestsellers-item a {
+    text-decoration: none;
+    color: var(--basic-white);
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .bestsellers-item-img img{
+    width: 267px;
+    height: 267px;
     border-radius: 50%;
 }
 
 .bestsellers-item-price {
-    text-decoration: none;
+    margin: 0;
     color: var(--basic-white);
     font-size: 45px;
     line-height: 45px;
@@ -306,9 +318,7 @@
     line-height: 35px;
 }
 
-.bestsellers-item-price:hover, .bestsellers-item-price:active {
-    color: var(--special-whitelink);
-}
+    /* О магазине */
 
 .shop-desc {
     outline: 4px solid snow;
@@ -501,3 +511,39 @@
 .copy-text a:hover, .copy-text a:active {
     color: var(--special-whitelink);
 }
+
+/* Каталог */
+
+/* Catalog Header */
+
+.current-item {
+    width: 89px;
+    height: 31px;
+    border-radius: 26px;
+    background-color: var(--special-red-dark);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.page-catalog {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--basic-grey);
+    color: var(--basic-white);
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    gap: 40px;
+    align-content: start;
+}
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-item a {
+    color: var(--basic-white);
+    text-decoration: none;
+}
+
