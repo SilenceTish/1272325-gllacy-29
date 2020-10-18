@@ -930,14 +930,10 @@ button {
     padding: 7px 8px;
     color: var(--basic-white);
     text-decoration: none;
-    
 }
 
 .pagination-item a:hover {
-    
     background: rgba(255, 255, 255, 0.2);
-    
-    
 }
 
 
