@@ -7,7 +7,7 @@
     <title>HTML Academy: Глейси: Каталог</title>
   </head>
 
-  <body class="page-body inner-page site-wrapper-1">
+  <body class="page-body inner-page">
     <header class="main-header wrapper">
         <div class="main-header-logo">
           <a href="index.html">
@@ -48,8 +48,77 @@
 
         <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
-            <form action="" class="filter">
+            <form action="https://echo.htmlacademy.ru/courses" method="get">
+              
+              <fieldset class="filter-item">
+                <legend>Сортировка:</legend>
+                <div class="filter-form screening-filter"></div>  
+                  <select name="screening">
+                    <option value="bestsellers">по популярности</option>
+                    <option value="lowcost">сначала недорогие</option>
+                    <option value="expensive">сначала дорогие</option>
+                    <option value="fatness">по жирности</option>
+                  </select>
+                </div> 
+              </fieldset>
+
+              <fieldset class="filter-item">
+                <legend>Цена: 100 ₽ – 500 ₽</legend>
+                <div class="filter-form range-filter">
+                  <div class="scale">
+                    <div class="bar" style="width: 50%; margin-left: 20%"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0" style="left: 23%">
+                  </div>
+                  <div class="toggle toggle-max" tabindex="0" style="left: 60%">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="filter-item">
+                <legend>Жирность:</legend>
+                <div class="filter-form fatness">
+                  
+                  <input type="radio" name="fatness" id="0" value="0">
+                  <label for="0">0%</label>
+                  
+                  <input type="radio" name="fatness" id="10" value="10" checked>
+                  <label for="0">до 10%</label>
+
+                  <input type="radio" name="fatness" id="30" value="30">
+                  <label for="0">до 30%</label>
+                  
+                  <input type="radio" name="fatness" id="31" value="31">
+                  <label for="0">выше 30%</label>
+
+                </div>
+              </fieldset>
+
+              <fieldset class="filter-item">
+                <legend>Наполнители:</legend>
+
+                <div class="filter-form checkbox-items">
+
+                  <input type="checkbox" name="choko" id="choko-field" checked>
+                  <label for="choko-field">шоколадные</label>
+
+                  <input type="checkbox" name="sugar" id="sugar-field" checked>
+                  <label for="sugar-field">сахарные присыпки</label>
+
+                  <input type="checkbox" name="fruits" id="fruits-field">
+                  <label for="fruits-field">фрукты</label>
+
+                  <input type="checkbox" name="syrup" id="syrup-field">
+                  <label for="syrup-field">сиропы</label>
+
+                  <input type="checkbox" name="jam" id="jam-field">
+                  <label for="jam-field">джемы</label>
                 
+                </div>
+
+              </fieldset> 
+
+              <input class="filter-form filter-button" type="submit" value="Применить">              
             </form>
         </section>
 

@@ -1,4 +1,4 @@
-/* Fonts */
+    /* Fonts */
 
 @font-face {
     font-family: "Roboto";
@@ -22,7 +22,7 @@
     src: url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotobold.woff") format("woff");
 }
 
-/* Global */
+    /* Global */
 
 :root {
     --wrapper-grey: #849D8F;
@@ -99,7 +99,7 @@ button {
     outline: none;
 }
 
-/* Buttons */
+    /* Buttons */
 
 .main-button {
     display: inline-block;
@@ -126,7 +126,7 @@ button {
     box-shadow: inset 0px 2px 2px #942718;
 }
 
-/* Main Header */
+    /* Main Header */
 
 .main-header {
     min-height: 114px;
@@ -149,7 +149,7 @@ button {
     grid-template-columns: 1fr max-content;
 }
 
-/* Site Navigation */
+    /* Site Navigation */
 
 .site-nav-list {
     margin: 0;
@@ -204,7 +204,7 @@ button {
     border-radius: 26px;
 }
 
-/* User Control */
+    /* User Control */
 
 .user-control-list {
     font-weight: 500;
@@ -321,9 +321,9 @@ button {
     color: var(--basic-white);
 }
 
-/* Main */
+    /* Main */
 
-/* Slider */
+    /* Slider */
 
 .choice-slider {
     color: var(--basic-white);
@@ -393,7 +393,7 @@ button {
     background-color: #ffffff;
 }
 
-/* Offers */
+    /* Offers */
 
 .offers {
     font-weight: bold;
@@ -443,7 +443,7 @@ button {
     bottom: 22px;
 }
 
-    /* Хиты продаж */
+    /* Catalog Items */
 
 .catalog {
     margin-bottom: 40px;
@@ -518,7 +518,7 @@ button {
 }
 
 
-    /* О магазине */
+    /* About us */
 
 .shop-desc {
     background: url("../img/background/pattern-back.png");
@@ -599,7 +599,7 @@ button {
 }
 
 
-/* Articles */
+    /* Articles */
 
 .aside-columns {
     display: grid;
@@ -673,7 +673,7 @@ button {
     border-radius: 6px;
 }
 
-/*Main Footer*/
+    /*Main Footer*/
 
 .main-footer {
 }
@@ -824,9 +824,105 @@ button {
     color: var(--special-whitelink);
 }
 
-/* Каталог */
+    /* Modal Forms */
 
-/* Catalog Header */
+.modal {
+    box-sizing: border-box;
+    background: var(--modal-white);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+}
+
+    /* Login Form */
+
+.login-form {
+    width: 277px;
+    padding: 20px 17px 22px 19px;
+    position: absolute;
+    top: 59px;
+    right: 50px;
+    display: none;
+}
+
+.login-form p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    box-sizing: border-box;
+    width: 241px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #D3D3D2;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.login-form .login-admin {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.login-help {
+    margin-left: 20px;
+}
+
+.login-form .link-black {
+    text-decoration: none;
+    color: #323232;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+    font-size: 13px;
+    line-height: 15px;
+}
+
+    /* Search Form */
+
+.search-form {
+    width: 341px;
+    padding: 20px 15px;
+    position: absolute;
+    top: 59px;
+    right: 270px;
+    display: none;
+}
+
+.search-form input {
+    box-sizing: border-box;
+    width: 311px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #D3D3D2;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+}
+
+    /* Question Form */
+
+    
+
+    /* Catalog Page*/
+
+.inner-page {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--wrapper-grey);
+    color: var(--basic-white);
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    gap: 40px;
+    align-content: start;
+}
+
+    /* Catalog Header */
 
 .current-item {
     display: inline-block;
@@ -837,20 +933,112 @@ button {
     vertical-align: middle;
 }
 
-/* Main */
+    /* Catalog Main */
 
-.page-catalog {
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    background-color: var(--basic-grey);
-    color: var(--basic-white);
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    gap: 40px;
-    align-content: start;
+    /* Filters */
+
+.filters {
+    margin-bottom: 40px;
 }
+
+.filters form {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.filter-item {
+    margin: 0;
+    padding: 0;
+    border: none;
+    margin-right: 15px;
+    margin-bottom: 14px;
+}
+
+.filter-form {
+    box-sizing: border-box;
+    
+    height: 36px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.filter-item legend {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    margin-bottom: 7px;
+    margin-left: 16px;
+}
+
+    /* Fieldset 1 */  
+
+.screening-filter {
+    min-width: 196px;
+}
+
+    /* Fieldset 2 */
+
+.range-filter {
+    width: 218px;
+    padding-top: 18px;
+    padding-left: 21px;
+    padding-right: 21px;
+    position: relative;
+}
+
+.range-filter .scale {
+    height: 2px;
+    background-color: rgba(248, 247, 244, 0.5);
+}
+
+.range-filter .bar {
+    width: 94px;
+    height: 2px;
+    background-color: var(--modal-white);
+}
+
+.range-filter .toggle {
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    background-color: var(--wrapper-grey);
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 9px;
+    left: 0;
+}
+
+.range-filter .toggle-min {
+    left: 14px;
+}
+
+.range-filter .toggle-max {
+    left: 103px;
+}
+
+    /* Fieldset 3 */
+
+.fatness {
+    min-width: 425px;
+}
+
+    /* Fieldset 4 */
+
+.checkbox-items {
+    min-width: 711px;
+}
+
+.filter-button {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border: 2px solid #FFFFFF;
+    color: var(--basic-white);
+}
+
+    /* Breadcrumbs */
 
 .breadcrumbs {
     list-style: none;
@@ -859,7 +1047,9 @@ button {
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
+    margin-bottom: 13px;
 }
+
 .breadcrumbs li {
     font-size: 14px;
     line-height: 16px;
@@ -897,13 +1087,22 @@ button {
     border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
-/* Catalog List */
+.inner-page h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 41px; 
+    margin-bottom: 29px;
+}
 
-.catalog-list {
+    /* Catalog List */
+
+.inner-page .catalog-list {
     margin-bottom: 80px;
 }
 
-/* Pagination */
+    /* Pagination */
 
 .pagination-list {
     list-style: none;
