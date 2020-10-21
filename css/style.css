@@ -87,10 +87,15 @@
 
 .visually-hidden {
     position: absolute;
-    clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 button {
@@ -608,16 +613,21 @@ button {
 }
 
 .blog {
-    padding-top: 23px;
-    padding-left: 20px;
+    box-sizing: border-box;
     background: url("../img/background/strawberry-back.png") no-repeat;
     border-radius: 16px;
+    padding-top: 23px;
+    padding-left: 20px;
+}
+
+.blog h3, .blog a {
+    padding: 0;
+    margin: 0;
 }
 
 .blog-header {
     font-weight: 500;
     line-height: 22px;
-    margin: 0;
     margin-bottom: 15px;
 }
 
@@ -635,13 +645,15 @@ button {
 }
 
 .mailing {
-    padding-top: 34px;
+    box-sizing: border-box;
+    padding-top: 33px;
     padding-left: 26px;
+    padding-bottom: 39px;
     background-image: 
     url("../img/background/mailing-top.png"),
     url("../img/background/post-back.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center, 0 0;
     border-radius: 16px;
 }
 
@@ -649,16 +661,17 @@ button {
     margin: 0;
     padding: 0;
     max-width: 512px;
+    font-size: 16px;
     line-height: 22px;
     color: var(--special-grey);
-    margin-bottom: 47px;
+    margin-bottom: 30px;
 }
 
 .mailing-form {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin: 0 26px 40px 0;
+ 
 }
 
 .mailing-button {
@@ -676,24 +689,37 @@ button {
     /*Main Footer*/
 
 .main-footer {
+    width: 100%;
 }
 
 .main-contacts {
     margin: 0 auto;
-    background: url("../img/map.png") no-repeat;
-    width: 1200px;
-    height: 430px;
+}
+
+.map {
+    max-height: 430px;
+}
+
+.contacts-block {
     position: relative;
 }
 
 .main-contacts-block {
     width: 253px;
-    padding: 25px;
+    padding: 31px 25px;
     background: var(--basic-white);
     border-radius: 16px;
     position: absolute;
-    right: 27px;
-    top: 62px;
+    top: -368px;
+    right: 0;
+}
+
+.main-contacts-block h3, .main-contacts-block p {
+    margin: 0;
+}
+
+.main-contacts-center {
+    margin: 25px 0;
 }
 
 .main-contacts-text {
