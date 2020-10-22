@@ -28,10 +28,13 @@
     --wrapper-grey: #849D8F;
     --wrapper-blue: #8996A6;
     --wrapper-pink: #9D8B84;
+
     --basic-white: #FFFFFF;
     --basic-black: #323232;
     --modal-white: #F8F7F4;
+    --modal-text-grey: #999999;
     --form-white: #FEFEFE;
+    --form-border-white: #D3D3D2;
     --special-grey: #5A5A5A;
 
     --special-red-hover: #FBDED7;
@@ -40,7 +43,21 @@
     --special-blacklink: #E84D37;
     --special-whiteactive: #EDEDED;
 
+    --special-shadow-red: #AC1000;
+    --modal-shadow-red: rgba(172, 16, 0, 0.64);
+
+    --button-active-red: #942718; 
+
     --special-red-dark: #D07058;
+    --special-light-grey: rgba(255, 255, 255, 0.2);
+    --special-middle-grey: rgba(255, 188, 158, 0.3);
+    --special-filter-white: rgba(248, 247, 244, 0.5);
+    --special-input-grey: rgba(178, 178, 178, 0.52);
+    --special-shadow-grey: #696969;
+
+    --special-border-black: rgba(50, 50, 50, 0.2);
+    --special-light-black: rgba(50, 50, 50, 0.3);
+    --modal-shadow-black: rgba(0, 0, 0, 0.4);
 }
 
 .page {
@@ -123,12 +140,12 @@ button {
 
 .main-button:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-    box-shadow: 0px 1px 2px #AC1000;
+    box-shadow: 0px 1px 2px var(--special-shadow-red);
 }
 
 .main-button:active {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-    box-shadow: inset 0px 2px 2px #942718;
+    box-shadow: inset 0px 2px 2px var(--button-active-red);
 }
 
     /* Main Header */
@@ -167,6 +184,7 @@ button {
 
 .site-nav-item {
     margin-right: 14px;
+    position: relative;
 }
 
 .site-nav-item:last-child {
@@ -188,7 +206,7 @@ button {
     content: "";
     position: absolute;
     display: inline-block;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid var(--special-light-grey);
     width: 80%;
     bottom: 10px;
     right: 13px;
@@ -205,8 +223,68 @@ button {
     color: var(--basic-black);
     border-bottom: none;
     background: var(--special-whiteactive);
-    box-shadow: inset 0px 2px 1px #696969;
+    box-shadow: inset 0px 2px 1px var(--special-shadow-grey);
     border-radius: 26px;
+}
+
+    /* Submenu */
+
+.submenu { 
+    display: none;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 20px var(--modal-shadow-black);
+    border-radius: 4px;
+    padding-top: 13px;
+    padding-bottom: 6px;
+}
+
+.submenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 143px;
+}
+
+.submenu h3 {
+    margin: 0;
+    padding: 0;
+    color: var(--basic-black);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--special-border-black);
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 6px;
+    margin-right: 9px;
+}
+
+.submenu-item a {
+    display: block;
+    padding: 6px 20px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--basic-black);
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.submenu-item a:hover {
+    background-color: var(--special-red-hover);
+}
+
+.submenu-item a:active {
+    background-color: var(--special-red-active);
+}
+
+.site-nav-item:hover .submenu {
+    display: block; 
+    position: absolute;
+    top: 40px;
+    left: -5px;
 }
 
     /* User Control */
@@ -230,7 +308,7 @@ button {
 
 .user-link {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--special-light-grey);
     border-radius: 20px;
     color: var(--basic-white);
     text-decoration: none;
@@ -366,7 +444,7 @@ button {
     font-size: 32px;
     padding: 16px 32px;
     line-height: 44px; 
-    box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+    box-shadow: 0px 2px 2px var(--modal-shadow-red);
     border-radius: 70px; 
     font-weight: 700;
     line-height: 30px;
@@ -389,19 +467,19 @@ button {
     width: 17px;
     height: 17px;
     background-color: transparent;
-    border: 2px solid #ffffff;
+    border: 2px solid var(--basic-white);
     border-radius: 50%;
     cursor: pointer;
 }
   
   .slider-controls .current {
-    background-color: #ffffff;
+    background-color: var(--basic-white);
 }
 
     /* Offers */
 
 .offers {
-    font-weight: bold;
+    font-weight: 700;
     color: var(--basic-white);
     margin-bottom: 40px;
 }
@@ -451,7 +529,7 @@ button {
     /* Catalog Items */
 
 .catalog {
-    margin-bottom: 40px;
+   /* margin-bottom: 40px;*/
 }
 
 .catalog-list {
@@ -466,11 +544,48 @@ button {
 .catalog-item {
     text-align: center;
     position: relative;
+    margin-bottom: 40px;
+    
 }
 
-.catalog-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.catalog-item::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -13px;
+    background-color: var(--special-light-grey);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 293px;
+    height: 402px;
+    
+    display: none;
 }
+
+.catalog-item:hover::before {
+    display: block;
+    z-index: 1;
+}
+
+.catalog-button {
+    padding: 12px 16px;
+    position: absolute;
+    top: 331px;
+    left: 33px;
+    display: none;
+}
+
+.catalog-item:hover .catalog-button {
+    display: block;
+    z-index: 1;
+}
+
+/*
+.catalog-item:hover {
+    background-color: var(--special-light-grey);
+    
+}
+*/
 
 .catalog-item a {
     text-decoration: none;
@@ -478,13 +593,14 @@ button {
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid var(--special-light-grey);
 }
 
 .catalog-item-img {
     width: 267px;
     height: 267px;
     margin-bottom: 13px;
+    z-index: -1;
 }
 
 .catalog-item-img img {
@@ -518,12 +634,12 @@ button {
 .hidden-button:hover {
     opacity: 1;
     background: linear-gradient(180deg, #F26843 0%, #E84D37 100%);
-    box-shadow: 0px 1px 2px #AC1000;
+    box-shadow: 0px 1px 2px var(--special-shadow-red);
     border-radius: 50px;
 }
 
 
-    /* About us */
+    /* About Shop */
 
 .shop-desc {
     background: url("../img/background/pattern-back.png");
@@ -671,7 +787,6 @@ button {
     display: flex;
     align-items: center;
     justify-content: flex-start;
- 
 }
 
 .mailing-button {
@@ -682,7 +797,7 @@ button {
 .mailing-form input {
     width: 368px;
     height: 44px;
-    border: 1px solid rgba(178, 178, 178, 0.52);
+    border: 1px solid var(--special-input-grey);
     border-radius: 6px;
 }
 
@@ -819,12 +934,12 @@ button {
 .docs-item a {
     text-decoration: none;
     color: var(--basic-white);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid var(--special-light-grey);
 }
 
 .docs-item a:hover, .docs-item a:active {
     color: var(--special-whitelink);
-    border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+    border-bottom: 1px solid var(--special-middle-grey);
 }
 
 .copy {
@@ -855,7 +970,7 @@ button {
 .modal {
     box-sizing: border-box;
     background: var(--modal-white);
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 20px 20px var(--modal-shadow-black);
     border-radius: 4px;
 }
 
@@ -881,11 +996,11 @@ button {
     padding-top: 15px;
     padding-left: 15px;
     padding-bottom: 15px;
-    border: 1px solid #D3D3D2;
+    border: 1px solid var(--form-border-white);
     border-radius: 4px;
     font-size: 14px;
     line-height: 16px;
-    color: #999999;
+    color: var(--modal-text-grey);
 }
 
 .login-form .login-admin {
@@ -899,8 +1014,8 @@ button {
 
 .login-form .link-black {
     text-decoration: none;
-    color: #323232;
-    border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+    color: var(--basic-black);
+    border-bottom: 1px solid var(--special-light-black);
     font-size: 13px;
     line-height: 15px;
 }
@@ -922,11 +1037,11 @@ button {
     padding-top: 15px;
     padding-left: 15px;
     padding-bottom: 15px;
-    border: 1px solid #D3D3D2;
+    border: 1px solid var(--form-border-white);
     border-radius: 4px;
     font-size: 14px;
     line-height: 16px;
-    color: #999999;
+    color: var(--modal-text-grey);
 }
 
     /* Question Form */
@@ -983,9 +1098,8 @@ button {
 
 .filter-form {
     box-sizing: border-box;
-    
     height: 36px;
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--special-light-grey);
     border-radius: 20px;
 }
 
@@ -1015,7 +1129,7 @@ button {
 
 .range-filter .scale {
     height: 2px;
-    background-color: rgba(248, 247, 244, 0.5);
+    background-color: var(--special-filter-white);
 }
 
 .range-filter .bar {
@@ -1029,7 +1143,7 @@ button {
     height: 4px;
     padding: 0;
     background-color: var(--wrapper-grey);
-    border: 8px solid #ffffff;
+    border: 8px solid var(--basic-white);
     border-radius: 50%;
     position: absolute;
     top: 9px;
@@ -1060,7 +1174,7 @@ button {
     text-decoration: none;
     border: none;
     outline: none;
-    border: 2px solid #FFFFFF;
+    border: 2px solid var(--basic-white);
     color: var(--basic-white);
 }
 
@@ -1105,12 +1219,12 @@ button {
 .breadcrumbs a {
     text-decoration: none;
     color: var(--basic-white);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid var(--special-light-grey);
 }
 
 .breadcrumbs a:hover, .breadcrumbs a:active {
     color: var(--special-whitelink);
-    border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+    border-bottom: 1px solid var(--special-middle-grey);
 }
 
 .inner-page h1 {
@@ -1147,7 +1261,7 @@ button {
     display: block;
     padding: 7px 8px;
     color: var(--basic-black);
-    background: #ffffff;
+    background: var(--basic-white);
 }
 
 .pagination-item a {
@@ -1158,7 +1272,7 @@ button {
 }
 
 .pagination-item a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--special-light-grey);
 }
 
 
