@@ -185,38 +185,45 @@ button {
 .site-nav-item {
     margin-right: 14px;
     position: relative;
+    padding: 9px 13px 11px;
 }
 
 .site-nav-item:last-child {
     margin-right: 0;
 }
+
+.site-nav-item:hover {
+    color: var(--basic-black);
+    background: var(--basic-white);
+    border-radius: 26px;
+    z-index: 1;
+}
     
 .site-nav-link {
     display: inline-block;
-    padding: 9px 13px 11px;
     color: var(--basic-white);
     text-decoration: none;
-  /*  border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
-    text-align: center;
-    vertical-align: middle;
     position: relative;
+    z-index: 2;
 }
 
 .site-nav-link::before {
     content: "";
     position: absolute;
-    display: inline-block;
-    border-bottom: 1px solid var(--special-light-grey);
-    width: 80%;
-    bottom: 10px;
-    right: 13px;
+    background: var(--special-light-grey);
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
 }
 
-.site-nav-link:hover {
+.site-nav-link:hover::before {
+    opacity: 0;
+}
+
+.site-nav-item:hover .site-nav-link {
     color: var(--basic-black);
-    border-bottom: none;
-    background: var(--basic-white);
-    border-radius: 26px;
+    z-index: 2;
 }
 
 .site-nav-link:active {
@@ -227,9 +234,25 @@ button {
     border-radius: 26px;
 }
 
+.site-nav-catalog {
+    position: relative;
+}
+
+.site-nav-catalog::before {
+    content: "";
+    position: absolute;
+    width: 143px;
+    height: 210px;
+    top: 43px;
+    left: 0;
+}
+
     /* Submenu */
 
 .submenu { 
+    position: absolute;
+    top: 43px;
+    left: 0;
     display: none;
     background: #FFFFFF;
     box-shadow: 0px 20px 20px var(--modal-shadow-black);
@@ -272,19 +295,16 @@ button {
     line-height: 16px;
 }
 
+.site-nav-catalog:hover .submenu {
+    display: block;
+}
+
 .submenu-item a:hover {
     background-color: var(--special-red-hover);
 }
 
 .submenu-item a:active {
     background-color: var(--special-red-active);
-}
-
-.site-nav-item:hover .submenu {
-    display: block; 
-    position: absolute;
-    top: 40px;
-    left: -5px;
 }
 
     /* User Control */
@@ -579,13 +599,6 @@ button {
     display: block;
     z-index: 1;
 }
-
-/*
-.catalog-item:hover {
-    background-color: var(--special-light-grey);
-    
-}
-*/
 
 .catalog-item a {
     text-decoration: none;
@@ -1065,7 +1078,8 @@ button {
 
     /* Catalog Header */
 
-.current-item {
+.current-item, .current-item:hover {
+    color: var(--basic-white);
     display: inline-block;
     padding: 9px 14px 11px;
     border-radius: 26px;
