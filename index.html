@@ -253,14 +253,14 @@
 
     <section class="modal login-form">
       <h2 class="visually-hidden">Личный кабинет</h2>
-      <form action="https://echo.htmlacademy.ru/courses" method="post">
+      <form class="login-form-form" action="https://echo.htmlacademy.ru/courses" method="post">
         <p>
           <label class="visually-hidden" for="login-field">Логин</label>
-          <input type="email" name="login" id="login-field" placeholder="email@example.com">
+          <input class="login-input" type="email" name="login" id="login-field" placeholder="email@example.com">
         </p>
         <p>
           <label class="visually-hidden" for="password-field">Пароль</label>
-          <input type="password" name="password" id="password-field" placeholder="••••••">
+          <input class="login-input-password" type="password" name="password" id="password-field" placeholder="••••••">
         </p>
         <div class="login-admin">
           <div>
@@ -275,15 +275,32 @@
     </section>
 
     <section class="modal search-form">
-      <form action="https://echo.htmlacademy.ru/courses" method="post">
+      <form search-form-form action="https://echo.htmlacademy.ru/courses" method="post">
         <label class="visually-hidden" for="search-field">Поиск</label>
-        <input type="search" id="search-field" placeholder="Крем-брюле">
+        <input class="search-input" type="search" id="search-field" placeholder="Крем-брюле">
       </form>
     </section>
 
     <section class="modal question-form">
-
+      
+        <h2 class="question-title">Мы обязательно вам ответим!</h2>
+        <form class="question-form-form"action="https://echo.htmlacademy.ru/courses" method="post">
+          <p>
+            <label class="visually-hidden" for="name-field">Имя</label>
+            <input class="name-input" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label class="visually-hidden" for="login-field">Логин</label>
+            <input class="email-input" type="email" name="login" id="login-field" placeholder="email@example.com">
+          </p>
+          <p>
+            <textarea class="comment-input" name="comment" id="comment-field">В свободной форме</textarea>
+          </p>
+          <button class="main-button question-button" type="submit">Отправить</button>
+        </form>
+        <button class="modal-close" type="submit">Закрыть</button>
     </section>
 
+    <script src="js/script.js"></script>
   </body>
 </html>
