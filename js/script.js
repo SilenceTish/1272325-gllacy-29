@@ -73,7 +73,27 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-  /* Question Modal */
+  /* Basket Modal */
+
+  const basketLink = document.querySelector(".basket-full-link");
+  const basketPopup = document.querySelector(".basket-form");
+  
+  basketLink.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    basketPopup.classList.add("modal-show");
+  })
+  
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (basketPopup.classList.contains("modal-show")) {
+        evt.preventDefault();
+        basketPopup.classList.remove("modal-show");
+      }
+    }
+  });
+
+  
+    /* Question Modal */
 
 const commentLink = document.querySelector(".contacts-button");
 const commentPopup = document.querySelector(".question-form");
@@ -102,21 +122,3 @@ window.addEventListener("keydown", function (evt) {
 });
 
 
-  /* Basket Modal */
-
-  const basketLink = document.querySelector(".basket-full-link");
-  const basketPopup = document.querySelector(".basket");
-  
-  basketLink.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    basketPopup.classList.add("modal-show");
-  })
-  
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      if (basketPopup.classList.contains("modal-show")) {
-        evt.preventDefault();
-        basketPopup.classList.remove("modal-show");
-      }
-    }
-  });

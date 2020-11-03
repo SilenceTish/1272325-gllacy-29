@@ -141,6 +141,7 @@ button {
 .main-button:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
     box-shadow: 0px 1px 2px var(--special-shadow-red);
+    transition: 0.4s;
 }
 
 .main-button:active {
@@ -197,6 +198,13 @@ button {
     background: var(--basic-white);
     border-radius: 26px;
     z-index: 1;
+    cursor: pointer;
+}
+
+.site-nav-item:active {
+    background: var(--special-whiteactive);
+    box-shadow: inset 0px 2px 1px var(--special-shadow-grey);
+    border-radius: 26px;
 }
     
 .site-nav-link {
@@ -219,6 +227,7 @@ button {
 
 .site-nav-link:hover::before {
     opacity: 0;
+    transition: 0.4s;
 }
 
 .site-nav-item:hover .site-nav-link {
@@ -230,8 +239,6 @@ button {
     color: var(--basic-black);
     border-bottom: none;
     background: var(--special-whiteactive);
-    box-shadow: inset 0px 2px 1px var(--special-shadow-grey);
-    border-radius: 26px;
 }
 
 .site-nav-catalog {
@@ -241,8 +248,8 @@ button {
 .site-nav-catalog::before {
     content: "";
     position: absolute;
-    width: 143px;
-    height: 210px;
+    width: 100px;
+    height: 15px;
     top: 35px;
     left: 0;
 }
@@ -297,10 +304,12 @@ button {
 
 .site-nav-catalog:hover .submenu {
     display: block;
+    transition: 0.4s;
 }
 
 .submenu-item a:hover {
     background-color: var(--special-red-hover);
+    transition: 0.4s;
 }
 
 .submenu-item a:active {
@@ -338,6 +347,7 @@ button {
 .user-link:hover {
     color: var(--basic-black);
     background: var(--basic-white);
+    transition: 0.4s;
 }
 
 .search-link {
@@ -352,13 +362,14 @@ button {
     height: 16px;
     left: 8px;
     top: 8px;
-    background-image: url("../img/icons/icon-search.png");
+    background-image: url("../img/icons/icon-search.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
 }
 
 .search-link:hover::before {
     background-image: url("../img/icons/icon-search-hover.png");
+    transition: 0.4s;
 }
 
 .login-link {
@@ -372,7 +383,7 @@ button {
     height: 19px;
     left: 16px;
     top: 6px;
-    background-image: url("../img/icons/icon-enter.png");
+    background-image: url("../img/icons/icon-enter.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
     position: absolute;
@@ -380,6 +391,7 @@ button {
 
 .login-link:hover::before {
     background-image: url("../img/icons/icon-enter-hover.png");
+    transition: 0.4s;
 }
 
 .basket-link {
@@ -393,7 +405,7 @@ button {
     height: 20px;
     left: 16px;
     top: 6px;
-    background-image: url("../img/icons/icon-basket.png");
+    background-image: url("../img/icons/icon-basket.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
     position: absolute;
@@ -401,6 +413,7 @@ button {
 
 .basket-link:hover::before {
     background-image: url("../img/icons/icon-basket-hover.png");
+    transition: 0.4s;
 }
 
 .contacts-short {
@@ -565,7 +578,6 @@ button {
     text-align: center;
     position: relative;
     margin-bottom: 40px;
-    
 }
 
 .catalog-item::before {
@@ -578,7 +590,6 @@ button {
     border-radius: 4px;
     width: 293px;
     height: 402px;
-    
     display: none;
 }
 
@@ -593,11 +604,13 @@ button {
     top: 331px;
     left: 33px;
     display: none;
+    cursor: pointer;
 }
 
 .catalog-item:hover .catalog-button {
     display: block;
     z-index: 1;
+    transition: 0.4s;
 }
 
 .catalog-item a {
@@ -649,6 +662,7 @@ button {
     background: linear-gradient(180deg, #F26843 0%, #E84D37 100%);
     box-shadow: 0px 1px 2px var(--special-shadow-red);
     border-radius: 50px;
+    transition: 0.4s;
 }
 
 
@@ -771,6 +785,7 @@ button {
 
 .blog-news:hover, .blog-news:active {
     color: var(--special-blacklink);
+    transition: 0.4s;
 }
 
 .mailing {
@@ -805,14 +820,28 @@ button {
 .mailing-button {
     padding: 14px 19px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .mailing-form input {
+    box-sizing: border-box;
     width: 368px;
     height: 44px;
+    padding-left: 14px;
     border: 1px solid var(--special-input-grey);
     border-radius: 6px;
 }
+
+.mailing-form input:hover {
+    border: 2px solid rgba(178, 178, 178, 0.52);
+    transition: 0.4s;
+}
+
+.mailing-form input:focus {
+    outline: none;
+    border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
 
     /*Main Footer*/
 
@@ -869,6 +898,7 @@ button {
 
 .main-contacts-tel:hover, .main-contacts-tel:active {
     color: var(--special-blacklink);
+    transition: 0.4s;
 }
 
 .contacts-button {
@@ -907,10 +937,12 @@ button {
 
 .socials-button:hover path, .socials-button:active path {
     fill-opacity: 1;
+    transition: 0.4s;
 }
 
 .socials-button:hover g, .socials-button:active g {
     opacity: 1;
+    transition: 0.4s;
 }
 
 .docs {
@@ -957,6 +989,7 @@ button {
 .docs-item a:hover, .docs-item a:active {
     color: var(--special-whitelink);
     border-bottom: 1px solid var(--special-middle-grey);
+    transition: 0.4s;
 }
 
 .docs-current {
@@ -995,6 +1028,7 @@ button {
 
 .copy-text a:hover, .copy-text a:active {
     color: var(--special-whitelink);
+    transition: 0.4s;
 }
 
     /* Modal Forms */
@@ -1010,6 +1044,18 @@ button {
     right: 0;
     left: 0;
     margin: auto;
+}
+
+.modal input:hover,
+.modal textarea:hover {
+    border: 2px solid rgba(178, 178, 178, 0.52);
+    transition: 0.4s;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+    outline: none;
+    border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
     /* Login Form */
@@ -1075,6 +1121,66 @@ button {
     line-height: 16px;
     color: var(--modal-text-grey);
 }
+
+
+
+    /* Basket Modal */
+
+.basket-form {
+    max-width: 539px;
+    min-height: 242px;
+    color: var(--basic-black);
+    font-size: 13px;
+    line-height: 16px;
+    padding: 20px 14px 21px 12px;
+    display: none;
+}
+    
+.basket-table {
+    border-bottom: 1px solid #CACAC7;
+    border-spacing: 8px;
+    margin-bottom: 16px;
+}
+    
+.basket-table-column-3 {
+    width: 225px;
+    padding-left: 4px;
+    padding-right: 5px;
+}
+    
+.basket-table-column-4 {
+    width: 129px;
+    text-align: center;
+    color: #000000;
+}
+    
+.basket-table-column-4 span {
+    color: var(--modal-shadow-black);
+}
+    
+.basket-table-column-5 {
+    padding-right: 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+    
+.basket-form p {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+}
+    
+.order-button {
+    position: absolute;
+    right: 14px;
+    bottom: 21px;
+    cursor: pointer;
+}
+    
+
 
     /* Question Form */
 
@@ -1218,6 +1324,7 @@ button {
     background-color: var(--special-red-dark);
     text-align: center;
     vertical-align: middle;
+    cursor: auto;
 }
 
 .basket-full-link {
@@ -1293,19 +1400,32 @@ button {
 
     /* Fieldset 1 */  
 
-.screening-filter {
-    min-width: 196px;
-}
 
-.filter-form select {
+.screening-form {
+    box-sizing: border-box;
+    height: 36px;
     background: var(--special-light-grey);
     border-radius: 20px;
+    border: none;
+    color: var(--basic-white);
+    font-weight: 500;
+    padding-left: 16px;
 }
 
+.screening-form:hover {
+    color: var(--basic-black);
+    cursor: pointer;
+    transition: 0.4s;
+}
 
-.filter-form option {
+.screening-form:focus {
+    outline: none;
+}
+
+.screening-form option {
     border: none;
     background: var(--special-light-grey);
+    color: var(--basic-black);
 }
 
     /* Fieldset 2 */
@@ -1395,6 +1515,7 @@ button {
 
 .filter-radio label:hover {
     opacity: 1;
+    transition: 0.4s;
 }
 
     /* Fieldset 4 */
@@ -1417,6 +1538,10 @@ button {
     margin-right: 0;
 }
 
+.filter-checkbox label {
+    font-weight: 500;
+}
+
 .filter-input-checkbox + label::before {
     content: "";
     position: absolute;
@@ -1425,6 +1550,10 @@ button {
     top: -2px;
     width: 20px;
     height: 20px;
+}
+
+.filter-input-checkbox:checked + label::before {
+    display: none;
 }
 
 .filter-input-checkbox:checked + label::after {
@@ -1449,7 +1578,21 @@ button {
     line-height: 18px;
     font-weight: 500;
     padding: 9px 27px 9px 27px;
+    cursor: pointer;
 }
+
+.filter-button:hover {
+    color: var(--basic-black);
+    background: var(--basic-white);
+    transition: 0.4s;
+}
+
+.filter-button:active {
+    border: none;
+    box-shadow: inset 0px 2px 1px var(--special-shadow-grey);
+}
+
+
 
     /* Breadcrumbs */
 
@@ -1498,6 +1641,7 @@ button {
 .breadcrumbs a:hover, .breadcrumbs a:active {
     color: var(--special-whitelink);
     border-bottom: 1px solid var(--special-middle-grey);
+    transition: 0.4s;
 }
 
 .inner-page h1 {
@@ -1531,7 +1675,6 @@ button {
     display: inline-block;
     text-align: center;
     margin-right: 4px;
-   /* background: var(--special-light-grey);*/
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -1540,6 +1683,8 @@ button {
 
 .pagination-item:hover {
     background: var(--special-light-grey);
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .pagination-item a {
@@ -1564,60 +1709,4 @@ button {
 .pagination-item-current span {
     display: inline-block;
     padding-top: 3px;
-}
-
-
-    /* Basket Modal */
-
-.basket {
-    max-width: 539px;
-    min-height: 242px;
-    color: var(--basic-black);
-    font-size: 13px;
-    line-height: 16px;
-    padding: 20px 14px 21px 12px;
-   display: none;
-}
-
-.basket-table {
-    border-bottom: 1px solid #CACAC7;
-    border-spacing: 8px;
-    margin-bottom: 16px;
-}
-
-.basket-table-column-3 {
-    width: 225px;
-    padding-left: 4px;
-    padding-right: 5px;
-}
-
-.basket-table-column-4 {
-    width: 129px;
-    text-align: center;
-    color: #000000;
-}
-
-.basket-table-column-4 span {
-    color: var(--modal-shadow-black);
-}
-
-.basket-table-column-5 {
-    padding-right: 12px;
-    text-align: left;
-    white-space: nowrap;
-}
-
-.basket p {
-    margin: 0;
-    padding: 0;
-    text-align: right;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 16px;
-}
-
-.order-button {
-    position: absolute;
-    right: 14px;
-    bottom: 21px;
 }
