@@ -372,6 +372,42 @@ button {
     transition: 0.4s;
 }
 
+.user-control-search {
+    position: relative;
+}
+
+    /* Search Form */
+
+.search-form {
+    position: absolute;
+    top: 36px;
+    left: -309px;
+    width: 341px;
+    padding: 20px 15px;
+    display: none;
+}
+    
+.search-form input {
+    box-sizing: border-box;
+    width: 311px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border: 1px solid var(--form-border-white);
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--modal-text-grey);
+}
+    
+.user-control-search:hover .search-form {
+    display: block;
+    transition: 0.4s;
+}
+
+    /* Login Link */
+
+
 .login-link {
     position: relative;
     padding: 8px 16px 8px 44px;
@@ -393,6 +429,63 @@ button {
     background-image: url("../img/icons/icon-enter-hover.png");
     transition: 0.4s;
 }
+
+.user-control-link {
+    position: relative;
+}
+
+    /* Login Form */
+
+.login-form {
+    position: absolute;
+    top: 36px;
+    left: -185px;
+    width: 277px;
+    padding: 20px 17px 22px 19px;
+    display: none;    
+}
+    
+.login-form p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+    
+.login-form input {
+    box-sizing: border-box;
+    width: 241px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border: 1px solid var(--form-border-white);
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--modal-text-grey);
+}
+    
+.login-form .login-admin {
+    display: flex;
+    justify-content: flex-start;
+}
+    
+.login-help {
+    margin-left: 20px;
+}
+    
+.login-form .link-black {
+    text-decoration: none;
+    color: var(--basic-black);
+    border-bottom: 1px solid var(--special-light-black);
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.user-control-link:hover .login-form {
+    display: block;
+    transition: 0.4s;
+}
+
+    /* Basket Link */
 
 .basket-link {
     position: relative;
@@ -1038,12 +1131,7 @@ button {
     background: var(--modal-white);
     box-shadow: 0px 20px 20px var(--modal-shadow-black);
     border-radius: 4px;
-    position: fixed;
-    top: 120px;
-    bottom: auto;
-    right: 0;
-    left: 0;
-    margin: auto;
+    
 }
 
 .modal input:hover,
@@ -1058,133 +1146,25 @@ button {
     border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
-    /* Login Form */
-
-.login-form {
-    width: 277px;
-    padding: 20px 17px 22px 19px;
-    display: none;    
-}
-
-.login-form p {
-    margin: 0;
-    margin-bottom: 20px;
-}
-
-.login-form input {
-    box-sizing: border-box;
-    width: 241px;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    border: 1px solid var(--form-border-white);
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--modal-text-grey);
-}
-
-.login-form .login-admin {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.login-help {
-    margin-left: 20px;
-}
-
-.login-form .link-black {
-    text-decoration: none;
-    color: var(--basic-black);
-    border-bottom: 1px solid var(--special-light-black);
-    font-size: 13px;
-    line-height: 15px;
-}
-
-    /* Search Form */
-
-.search-form {
-    width: 341px;
-    padding: 20px 15px;
-    display: none;    
-}
-
-.search-form input {
-    box-sizing: border-box;
-    width: 311px;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    border: 1px solid var(--form-border-white);
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--modal-text-grey);
-}
 
 
 
-    /* Basket Modal */
 
-.basket-form {
-    max-width: 539px;
-    min-height: 242px;
-    color: var(--basic-black);
-    font-size: 13px;
-    line-height: 16px;
-    padding: 20px 14px 21px 12px;
-    display: none;
-}
-    
-.basket-table {
-    border-bottom: 1px solid #CACAC7;
-    border-spacing: 8px;
-    margin-bottom: 16px;
-}
-    
-.basket-table-column-3 {
-    width: 225px;
-    padding-left: 4px;
-    padding-right: 5px;
-}
-    
-.basket-table-column-4 {
-    width: 129px;
-    text-align: center;
-    color: #000000;
-}
-    
-.basket-table-column-4 span {
-    color: var(--modal-shadow-black);
-}
-    
-.basket-table-column-5 {
-    padding-right: 12px;
-    text-align: left;
-    white-space: nowrap;
-}
-    
-.basket-form p {
-    margin: 0;
-    padding: 0;
-    text-align: right;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 16px;
-}
-    
-.order-button {
-    position: absolute;
-    right: 14px;
-    bottom: 21px;
-    cursor: pointer;
-}
+
+
+
     
 
 
     /* Question Form */
 
 .question-form {
+    position: fixed;
+    top: 120px;
+    bottom: auto;
+    right: 0;
+    left: 0;
+    margin: auto;
     width: 477px;
     height: 441px;
     padding: 20px 24px;
@@ -1344,6 +1324,74 @@ button {
     background-repeat: no-repeat;
     background-position: 0 0;
     position: absolute;
+}
+
+.user-control-basket {
+    position: relative;
+}
+
+    /* Basket Modal */
+
+.basket-form {
+    position: absolute;
+    top: 36px;
+    left: -421px;
+    max-width: 539px;
+    min-height: 242px;
+    color: var(--basic-black);
+    font-size: 13px;
+    line-height: 16px;
+    padding: 20px 14px 21px 12px;
+    display: none;
+}
+        
+.basket-table {
+    border-bottom: 1px solid #CACAC7;
+    border-spacing: 8px;
+    margin-bottom: 16px;
+}
+        
+.basket-table-column-3 {
+    width: 225px;
+    padding-left: 4px;
+    padding-right: 5px;
+}
+        
+.basket-table-column-4 {
+    width: 129px;
+    text-align: center;
+    color: #000000;
+}
+        
+.basket-table-column-4 span {
+    color: var(--modal-shadow-black);
+}
+        
+.basket-table-column-5 {
+    padding-right: 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+        
+.basket-form p {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+}
+        
+.order-button {
+    position: absolute;
+    right: 14px;
+    bottom: 21px;
+    cursor: pointer;
+}
+
+.user-control-basket:hover .basket-form {
+    display: block;
+    transition: 0.4s;
 }
 
     /* Catalog Main */

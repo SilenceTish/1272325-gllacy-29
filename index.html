@@ -16,11 +16,12 @@
       </div>
       <nav class="main-nav">
         <ul class="site-nav-list">
-          <li class="site-nav-item site-nav-catalog"><a class="site-nav-link" href="catalog.html">Каталог</a>
+          <li class="site-nav-item site-nav-catalog">
+            <a class="site-nav-link" href="catalog.html">Каталог</a>
             <div class="submenu">
               <h3 class="submenu-title">Новинки</h3>
               <ul class="submenu-list">
-                <li class="submenu-item"><a href="#">Сливочное</a></li>
+                <li class="submenu-item"><a href="catalog.html">Сливочное</a></li>
                 <li class="submenu-item"><a href="#">Щербеты</a></li>
                 <li class="submenu-item"><a href="#">Фруктовый лед</a></li>
                 <li class="submenu-item"><a href="#">Мелорин</a></li>
@@ -31,11 +32,39 @@
           <li class="site-nav-item"><a class="site-nav-link" href="#">О компании</a></li>
         </ul>
         <div class="user-control-list">
-          <div class="user-control-item">
+          <div class="user-control-item user-control-search">
             <a class="user-link search-link" href="#"></a>
+            <div class="modal search-form">
+              <form search-form-form action="https://echo.htmlacademy.ru/courses" method="post">
+                <label class="visually-hidden" for="search-field">Поиск</label>
+                <input class="search-input" type="search" id="search-field" placeholder="Крем-брюле">
+              </form>
+            </div>
           </div>
-          <div class="user-control-item">
+          <div class="user-control-item user-control-link">
             <a class="user-link login-link" href="#">Вход</a>
+            <div class="modal login-form">
+              <h2 class="visually-hidden">Личный кабинет</h2>
+              <form class="login-form-form" action="https://echo.htmlacademy.ru/courses" method="post">
+                <p>
+                  <label class="visually-hidden" for="login-field">Логин</label>
+                  <input class="login-input" type="email" name="login" id="login-field" placeholder="email@example.com">
+                </p>
+                <p>
+                  <label class="visually-hidden" for="password-field">Пароль</label>
+                  <input class="login-input-password" type="password" name="password" id="password-field" placeholder="••••••">
+                </p>
+                <div class="login-admin">
+                  <div>
+                    <button class="main-button login-button" type="submit">Войти</button>
+                  </div>
+                  <div class=login-help>
+                    <a class="link-black" href="#">Забыли пароль?</a>
+                    <a class="link-black" href="#">Новая регистрация</a>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
           <div class="user-control-item">
             <a class="user-link basket-link" href="#">Пусто</a>
@@ -184,6 +213,7 @@
           </div>
         </div>
       </section>
+      
       <div class="footer-container wrapper">
           <section class="socials">
             <h2 class="visually-hidden">Соцсети</h2>
@@ -250,39 +280,8 @@
           </section>
       </div>
     </footer>
-
-    <section class="modal login-form">
-      <h2 class="visually-hidden">Личный кабинет</h2>
-      <form class="login-form-form" action="https://echo.htmlacademy.ru/courses" method="post">
-        <p>
-          <label class="visually-hidden" for="login-field">Логин</label>
-          <input class="login-input" type="email" name="login" id="login-field" placeholder="email@example.com">
-        </p>
-        <p>
-          <label class="visually-hidden" for="password-field">Пароль</label>
-          <input class="login-input-password" type="password" name="password" id="password-field" placeholder="••••••">
-        </p>
-        <div class="login-admin">
-          <div>
-            <button class="main-button login-button" type="submit">Войти</button>
-          </div>
-          <div class=login-help>
-            <a class="link-black" href="#">Забыли пароль?</a>
-            <a class="link-black" href="#">Новая регистрация</a>
-          </div>
-        </div>
-      </form>
-    </section>
-
-    <section class="modal search-form">
-      <form search-form-form action="https://echo.htmlacademy.ru/courses" method="post">
-        <label class="visually-hidden" for="search-field">Поиск</label>
-        <input class="search-input" type="search" id="search-field" placeholder="Крем-брюле">
-      </form>
-    </section>
-
-    <section class="modal question-form">
-      
+    
+    <section class="modal question-form">      
         <h2 class="question-title">Мы обязательно вам ответим!</h2>
         <form class="question-form-form"action="https://echo.htmlacademy.ru/courses" method="post">
           <p>
