@@ -376,6 +376,15 @@ button {
     position: relative;
 }
 
+.user-control-search::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 15px;
+    top: 15px;
+    left: 0;
+}
+
     /* Search Form */
 
 .search-form {
@@ -390,14 +399,6 @@ button {
 .search-form input {
     box-sizing: border-box;
     width: 311px;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    border: 1px solid var(--form-border-white);
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--modal-text-grey);
 }
     
 .user-control-search:hover .search-form {
@@ -434,6 +435,15 @@ button {
     position: relative;
 }
 
+.user-control-link::before {
+    content: "";
+    position: absolute;
+    width: 92px;
+    height: 15px;
+    top: 25px;
+    left: 0;
+}
+
     /* Login Form */
 
 .login-form {
@@ -453,14 +463,6 @@ button {
 .login-form input {
     box-sizing: border-box;
     width: 241px;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    border: 1px solid var(--form-border-white);
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--modal-text-grey);
 }
     
 .login-form .login-admin {
@@ -920,6 +922,7 @@ button {
     box-sizing: border-box;
     width: 368px;
     height: 44px;
+    vertical-align: middle;
     padding-left: 14px;
     border: 1px solid var(--special-input-grey);
     border-radius: 6px;
@@ -927,12 +930,14 @@ button {
 
 .mailing-form input:hover {
     border: 2px solid rgba(178, 178, 178, 0.52);
-    transition: 0.4s;
+    padding-left: 13px;
+    transition: 0.2s;
 }
 
 .mailing-form input:focus {
     outline: none;
     border: 2px solid rgba(46, 136, 228, 0.52);
+    padding-left: 13px;
 }
 
 
@@ -1131,32 +1136,35 @@ button {
     background: var(--modal-white);
     box-shadow: 0px 20px 20px var(--modal-shadow-black);
     border-radius: 4px;
-    
+}
+
+.modal input {
+    box-sizing: border-box;
+    height: 44px;
+    padding-left: 15px;
+    vertical-align: middle;
+    border: 1px solid var(--form-border-white);
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--modal-text-grey);
 }
 
 .modal input:hover,
 .modal textarea:hover {
     border: 2px solid rgba(178, 178, 178, 0.52);
-    transition: 0.4s;
+    padding-left: 14px;
+    transition: 0.2s;
 }
 
 .modal input:focus,
 .modal textarea:focus {
     outline: none;
     border: 2px solid rgba(46, 136, 228, 0.52);
+    padding-left: 14px;
 }
 
-
-
-
-
-
-
-
-    
-
-
-    /* Question Form */
+   /* Question Form */
 
 .question-form {
     position: fixed;
@@ -1170,6 +1178,7 @@ button {
     padding: 20px 24px;
     box-shadow: none;
     border-radius: 6px;
+    z-index: 10;
     display: none;
 }
 
@@ -1190,26 +1199,31 @@ button {
 
 .question-form input,
 .question-form textarea  {
-    background: #FFFFFF;
+    background: var(--basic-white);
     border: 1px solid var(--special-input-grey);
     box-sizing: border-box;
     border-radius: 4px;
     line-height: 20px;
     color: var(--modal-text-grey);
     margin-bottom: 20px;
-    padding-top: 16px;
-    padding-left: 14px;
+    
 }
 
 .question-form input {
     width: 267px;
     height: 44px;
-    padding-bottom: 16px;
+    vertical-align: middle;
 }
 
 .question-form textarea {
     width: 428px;
     height: 154px;
+    padding-top: 16px;
+    padding-left: 15px;
+}
+
+.question-form textarea:hover {
+    padding-top: 15px;
 }
 
 .question-button {
@@ -1328,6 +1342,15 @@ button {
 
 .user-control-basket {
     position: relative;
+}
+
+.user-control-basket::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    top: 25px;
+    left: 0;
 }
 
     /* Basket Modal */
@@ -1458,10 +1481,16 @@ button {
     color: var(--basic-white);
     font-weight: 500;
     padding-left: 16px;
+    padding-right: 35px;
+    appearance: none; 
+    background-image: url("../img/icons/icon-arrow-select.svg"); 
+    background-repeat: no-repeat;
+    background-position: right 13px top 50%;
 }
 
 .screening-form:hover {
     color: var(--basic-black);
+    background-image: url("../img/icons/icon-arrow-select-hover.svg"); 
     cursor: pointer;
     transition: 0.4s;
 }
@@ -1507,6 +1536,10 @@ button {
     position: absolute;
     top: 9px;
     left: 0;
+}
+
+.range-filter .toggle:hover {
+    cursor: pointer;
 }
 
 .range-filter .toggle-min {
@@ -1737,7 +1770,7 @@ button {
 
 .pagination-item a {
     display: inline-block;
-    padding-top: 3px;
+    padding-top: 4px;
     color: var(--basic-white);
     text-decoration: none;
     cursor: pointer;
@@ -1756,5 +1789,5 @@ button {
 
 .pagination-item-current span {
     display: inline-block;
-    padding-top: 3px;
+    padding-top: 4px;
 }
