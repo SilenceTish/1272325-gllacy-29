@@ -34,7 +34,7 @@
           <div class="user-control-item user-control-search">
             <a class="user-link search-link" href="#"></a>
             <div class="modal search-form">
-              <form search-form-form action="https://echo.htmlacademy.ru/courses" method="post">
+              <form action="https://echo.htmlacademy.ru/courses" method="post">
                 <label class="visually-hidden" for="search-field">Поиск</label>
                 <input class="search-input" type="search" id="search-field" placeholder="Крем-брюле">
               </form>
@@ -125,7 +125,7 @@
           <li class="catalog-item">
               <div class="catalog-item-img"><img src="img/catalog/goods-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
               </div>
-              <p class="catalog-item-price" href="#">310 ₽<span class="item-weight">/кг</span>
+              <p class="catalog-item-price">310 ₽<span class="item-weight">/кг</span>
               </p>
               <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
               <button type="button" class="main-button catalog-button">Быстрый просмотр</button>
@@ -133,7 +133,7 @@
           <li class="catalog-item">
               <div class="catalog-item-img"><img src="img/catalog/goods-2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
               </div>
-              <p class="catalog-item-price" href="#">380 ₽<span class="item-weight">/кг</span>
+              <p class="catalog-item-price">380 ₽<span class="item-weight">/кг</span>
               </p>
               <a href="#">Сливочно-кофейное с кусочками шоколада</a>
               <button type="button" class="main-button catalog-button">Быстрый просмотр</button>
@@ -141,7 +141,7 @@
           <li class="catalog-item">
               <div class="catalog-item-img"><img src="img/catalog/goods-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
               </div>
-              <p class="catalog-item-price" href="#">355 ₽<span class="item-weight">/кг</span>
+              <p class="catalog-item-price">355 ₽<span class="item-weight">/кг</span>
               </p>
               <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
               <button type="button" class="main-button catalog-button">Быстрый просмотр</button>
@@ -149,7 +149,7 @@
           <li class="catalog-item">
               <div class="catalog-item-img"><img src="img/catalog/goods-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
               </div>
-              <p class="catalog-item-price" href="#">415 ₽<span class="item-weight">/кг</span>
+              <p class="catalog-item-price">415 ₽<span class="item-weight">/кг</span>
               </p>
               <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
               <button type="button" class="main-button catalog-button">Быстрый просмотр</button>
@@ -183,7 +183,8 @@
           <h2 class="visually-hidden">Рассылка</h2>
           <p class="mailing-text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <div class="mailing-form">
-            <form action="" method="POST">
+            <form action="https://echo.htmlacademy.ru/courses" method="POST">
+              <label class="visually-hidden" for="email">Электронная почта</label>
               <input type="email" name="email" id="email" placeholder="email@example.com">
             </form>
             <button class="main-button mailing-button" type="submit">Отправить</button>
@@ -197,7 +198,7 @@
       <section class="main-contacts">
         <h2 class="visually-hidden">Адрес</h2>
         <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.32085871600612!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603300127746!5m2!1sru!2sru" width="100%" height="430" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.32085871600612!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603300127746!5m2!1sru!2sru" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
         <div class="contacts-block wrapper">
           <div class="main-contacts-block">
@@ -282,16 +283,17 @@
     
     <section class="modal question-form">      
         <h2 class="question-title">Мы обязательно вам ответим!</h2>
-        <form class="question-form-form"action="https://echo.htmlacademy.ru/courses" method="post">
+        <form class="question-form-form" action="https://echo.htmlacademy.ru/courses" method="post">
           <p>
             <label class="visually-hidden" for="name-field">Имя</label>
             <input class="name-input" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
           </p>
           <p>
-            <label class="visually-hidden" for="login-field">Логин</label>
-            <input class="email-input" type="email" name="login" id="login-field" placeholder="email@example.com">
+            <label class="visually-hidden" for="login-field-modal">Логин</label>
+            <input class="email-input" type="email" name="login" id="login-field-modal" placeholder="email@example.com">
           </p>
           <p>
+            <label class="visually-hidden" for="comment-field">Запрос</label>
             <textarea class="comment-input" name="comment" id="comment-field">В свободной форме</textarea>
           </p>
           <button class="main-button question-button" type="submit">Отправить</button>
